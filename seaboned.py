@@ -5,6 +5,13 @@ import numpy as np
 
 seaboneds = pd.read_csv("Salary.csv")
 
+#Matplot
+seaboneds.plot(x="YearsExperience", y="Salary", marker='o', color="black")
+plt.title("Correlation between Health Problems and Absences")
+plt.xlabel("Years of Experience")
+plt.ylabel("Employees' Salary")
+plt.show()
+
 #Main Plots
 sns.set_style("darkgrid")
 sns.color_palette("viridis")
@@ -28,6 +35,11 @@ sns.catplot(x="YearsExperience", y="Salary", data=seaboneds, kind="bar")
 sns.catplot(x="YearsExperience", y="Salary", data=seaboneds, kind="point")
 
 sns.lmplot(x="YearsExperience", y="Salary", data=seaboneds, hue="YearsExperience")
+
+plt.show()
+
+#Bar Plot
+sns.barplot(x="YearsExperience", y="Salary", data=seaboneds)
 
 plt.show()
 
